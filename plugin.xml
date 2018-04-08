@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-date-setting"
+    id="daicomplements"
     version="0.0.1">
 
-    <name>Date Setting</name>
+    <name>DAI Complements</name>
     <description></description>
     <author></author>
     <license>MIT</license>
@@ -15,14 +15,14 @@
 
     <platform name="android">
         <config-file target="config.xml" parent="/*">
-            <feature name="DateSetting" >
-                <param name="android-package" value="cordova.plugins.DateSetting"/>
+            <feature name="DaiComplements" >
+                <param name="android-package" value="cordova.plugins.DaiComplements"/>
             </feature>
         </config-file>
 
-        <js-module src="datesetting.js" name="Diagnostic">
-            <clobbers target="cordova.plugins.DateSetting" />
+        <js-module src="daicomplements.js" name="Diagnostic">
+            <clobbers target="cordova.plugins.DaiComplements" />
         </js-module>
-        <source-file src="DateSetting.java" target-dir="src/cordova/plugins" />
+        <source-file src="DaiComplements.java" target-dir="src/cordova/plugins" />
     </platform>
 </plugin>
