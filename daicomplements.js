@@ -1,4 +1,4 @@
-var daicomplements = (function(){
+var DaiComplements = (function(){
 
     DaiComplements = {
         settings_datetime_open: function(successFn, errorFn){
@@ -10,4 +10,4 @@ var daicomplements = (function(){
     };
     return DaiComplements;
 });
-module.exports = new daicomplements();
+module.exports = new DaiComplements();
