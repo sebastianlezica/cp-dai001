@@ -28,12 +28,16 @@ public class DaiComplements extends CordovaPlugin {
                     Intent intent = new Intent();
                     String packageName = cordova.getActivity().getPackageName();
                     PowerManager pm = (PowerManager)cordova.getActivity().getSystemService(Context.POWER_SERVICE);
+                    intent.setAction(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+                    intent.setData(Uri.parse("package:" + packageName));
+                    /*
                     if (pm.isIgnoringBatteryOptimizations(packageName)) {
                         intent.setAction(android.provider.Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
                     } else {
                         intent.setAction(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
                         intent.setData(Uri.parse("package:" + packageName));
                     };
+                    */
                     cordova.getActivity().startActivity(intent);
                 };
                 callbackContext.success();
