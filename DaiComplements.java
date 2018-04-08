@@ -17,7 +17,7 @@ public class DaiComplements extends CordovaPlugin {
             if (action.equals("settings_datetime_open")) {
                 cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_DATE_SETTINGS));
                 callbackContext.success();
-            } else if (action.equals("doze_request")) {
+            } else if (action.equals("battery_ignore_optimizations")) {
                 /*
                 Intent intent = new Intent();
                 intent.setAction(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
