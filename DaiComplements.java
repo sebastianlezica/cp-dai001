@@ -10,14 +10,14 @@ public class DaiComplements extends CordovaPlugin {
     public DaiComplements() {}
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         try {
-            if (action.equals('settings_datetime_open')){
+            if (action.equals("settings_datetime_open")) {
                 cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_DATE_SETTINGS));
                 callbackContext.success();
-            } else if (action.equals('doze_request')){
+            } else if (action.equals("doze_request")) {
                 cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_DATE_SETTINGS));
                 callbackContext.success();
             } else {
-                callbackContext.error('Invalid action');
+                callbackContext.error("Invalid action");
                 return false;
             }
         }catch(Exception e ) {
