@@ -1,8 +1,11 @@
 var DaiComplements = (function(){
 
     DaiComplements = {
-        open: function(successFn, errorFn){
-            cordova.exec(successFn, errorFn, 'DaiComplements', 'open', []);
+        settings_datetime_open: function(successFn, errorFn){
+            cordova.exec(successFn, errorFn, 'DaiComplements', 'settings_datetime_open', []);
+        },
+        doze_request: function(successFn, errorFn){
+            cordova.exec(successFn, errorFn, 'DaiComplements', 'doze_request', []);
         }
     };
     return DaiComplements;
