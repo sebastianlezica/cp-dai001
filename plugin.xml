@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-date-setting"
+    version="0.0.1">
+
+    <name>Date Setting</name>
+    <description></description>
+    <author></author>
+    <license>MIT</license>
+    <keywords>ecosystem:cordova</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="DateSetting" >
+                <param name="android-package" value="cordova.plugins.DateSetting"/>
+            </feature>
+        </config-file>
+
+        <js-module src="datesetting.js" name="Diagnostic">
+            <clobbers target="cordova.plugins.DateSetting" />
+        </js-module>
+        <source-file src="DateSetting.java" target-dir="src/cordova/plugins" />
+    </platform>
+</plugin>
