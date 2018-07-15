@@ -1,0 +1,23 @@
+{
+  "name": "DaiComplements",
+  "version": "1.0.0",
+  "description": ".",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianlezica/cp-dai001.git#master"
+  },
+  "keywords": [
+  ],
+  "platforms": [
+    "android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=5.0.0"
+    }
+  ],
+  "author": "",
+  "license": "",
+  "homepage": ""
+}
