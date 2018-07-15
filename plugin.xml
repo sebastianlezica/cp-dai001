@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="daicomplements"
-    version="0.0.1">
+    id="com.dai.complements"
+    version="1.0.0">
 
     <name>DAI Complements</name>
     <description></description>
@@ -10,7 +10,7 @@
     <license>MIT</license>
     <keywords>ecosystem:cordova</keywords>
     <engines>
-        <engine name="cordova" version=">=3.0.0" />
+        <engine name="cordova" version=">=5.0.0" />
     </engines>
 
     <platform name="android">
@@ -23,9 +23,27 @@
             </feature>
         </config-file>
 
-        <js-module src="daicomplements.js" name="Diagnostic">
+        <js-module src="www/daicomplements.js" name="DaiComplements">
             <clobbers target="cordova.plugins.DaiComplements" />
         </js-module>
-        <source-file src="DaiComplements.java" target-dir="src/cordova/plugins" />
+        <source-file src="src/android/DaiComplements.java" target-dir="src/cordova/plugins" />
+    </platform>
+</plugin>
+
+
+    <js-module src="www/webintent.js" name="WebIntent">
+        <clobbers target="WebIntent" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="WebIntent" >
+                <param name="android-package" value="com.borismus.webintent.WebIntent"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/WebIntent.java" target-dir="src/com/borismus/webintent" />
     </platform>
 </plugin>
