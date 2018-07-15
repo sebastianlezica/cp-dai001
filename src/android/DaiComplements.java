@@ -1,4 +1,4 @@
-package cordova.plugins;
+package com.dai.daicomplements;
 
 import android.content.Intent;
 import org.apache.cordova.CallbackContext;
